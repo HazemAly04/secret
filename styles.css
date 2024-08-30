@@ -80,16 +80,6 @@ body {
     padding: 10px;
 }
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: -webkit-sticky;
-    width: 100%;
-    bottom: 0;
-}
-
 
 .footer {
     background-color: #f0f0f0; /* Light grey background */
