@@ -5,37 +5,348 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webcrafters</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header class="header">
-        <h1>Webcrafters</h1>
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            background-color: #f0f0f0; /* Light grey background */
+            color: #333; /* Dark grey text color */
+            border-radius: 15px; /* Rounding the header */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative; /* Necessary for the underglow */
+        }
+    
+        /* Creating the underglow effect */
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 10%; /* Adjusted to match the padding of the header */
+            right: 10%; /* Adjusted to match the padding of the header */
+            height: 10px;
+            background: #0073e6; /* Blue underglow */
+            filter: blur(8px);
+            z-index: -1;
+            border-radius: 50%; /* Matching the roundness */
+        }
+    
+        .header h1 {
+            font-size: 28px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            color: #0073e6; /* Blue text color for the brand name */
+        }
+    
+        .header h1 img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .nav ul li {
+            margin-left: 20px;
+        }
+    
+        .nav ul li a {
+            text-decoration: none;
+            color: #0073e6; /* Blue text color for nav links */
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 10px; /* Rounding the nav links */
+            background-color: #e0e0e0; /* Light grey background for nav links */
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+        .nav ul li a:hover {
+            background-color: #0073e6; /* Blue background on hover */
+            color: #fff; /* White text on hover */
+        }
+    </style>
+    
+    
+      <header class="header">
+        <h1><img src="images/wc (1).jpg" alt="Webcrafters logo">Webcrafters</h1>
         <nav class="nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
-    </header>
-    <section id="home" class="home">
+      </header>
+      
+    <style>
+        .home {
+          width: 80%;
+          margin: 40px auto;
+          padding: 20px;
+          background-color: #f9f9f9;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          color: #333;
+          text-align: center;
+        }
+      
+        .home h2 {
+          font-size: 32px;
+          color: #333;
+          margin-bottom: 20px;
+        }
+      
+        .home p {
+          font-size: 18px;
+          line-height: 1.6;
+          margin-bottom: 20px;
+          color: #555;
+        }
+      
+        .home .highlight {
+          color: #0073e6;
+          font-weight: bold;
+        }
+      </style>
+      
+      <section id="home" class="home">
         <h2>Welcome to Webcrafters</h2>
-        <p>Your one-stop solution for network solutions and website development.</p>
-    </section>
-    <section id="services" class="services">
+        <p>Your one-stop solution for <span class="highlight">network solutions</span> and <span class="highlight">website development</span>.</p>
+        <p>WebCrafters Network Solutions specializes in delivering tailor-made web development, design, and digital strategies that elevate your online presence.</p>
+        <p>We craft custom websites that not only look stunning but also drive results, ensuring your brand stands out in the digital landscape.</p>
+        <p>Our comprehensive services are designed to meet your unique business needs, combining cutting-edge design, seamless functionality, and strategic marketing to help you connect with your audience and achieve your online goals.</p>
+        <p>With WebCrafters, your digital success is our top priority.</p>
+      </section>
+      
+    <style>
+        .services {
+          width: 80%;
+          margin: 40px auto;
+          padding: 20px;
+          background-color: #f9f9f9;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          color: #333;
+        }
+      
+        .services h2 {
+          font-size: 28px;
+          color: #333;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      
+        .services ul {
+          list-style: none;
+          padding: 0;
+        }
+      
+        .services li {
+          font-size: 18px;
+          padding: 15px;
+          border-bottom: 1px solid #ddd;
+          display: flex;
+          align-items: center;
+          background-color: #fff;
+          margin-bottom: 10px;
+          border-radius: 15px;
+          transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+      
+        .services li:last-child {
+          border-bottom: none;
+        }
+      
+        .services li:before {
+          content: '●';
+          color: #ccc;
+          font-size: 12px;
+          margin-right: 15px;
+        }
+      
+        .services li:hover {
+          background-color: #f0f0f0;
+          transform: translateY(-2px);
+          cursor: pointer;
+        }
+      </style>
+      
+      <section id="services" class="services">
         <h2>Our Services</h2>
         <ul>
-            <li>Website Development for Retail</li>
-            <li>Website Development for Centers</li>
-            <li>And More</li>
+          <li>Website Development for Retail</li>
+          <li>Website Development for Centers</li>
+          <li>Website Maintenance & Support</li>
+          <li>Custom Web Solutions</li>
+          <li>Performance Optimization</li>
+          <li>UI/UX Design Improvements</li>
+          <li>SEO & Content Strategy</li>
+          <li>Technical Support & Troubleshooting</li>
+          <li>Comprehensive Site Analysis & Reporting</li>
         </ul>
-    </section>
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: WebCrafterDevs@gmail.com</p>
+      </section>
+      
+      
+    <style>
+        .contact {
+          width: 80%;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #f5f5f5;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          color: #333;
+        }
+      
+        .contact h2 {
+          font-size: 28px;
+          color: #333;
+          margin-bottom: 15px;
+        }
+      
+        .contact p {
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 15px;
+        }
+      
+        .contact p:last-child {
+          margin-bottom: 0;
+        }
+      </style>
+      
+      <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p>Ready to elevate your website? We specialize in delivering comprehensive analyses across design, performance, user experience, and more. Let our experts provide you with the insights you need to succeed.</p>
+        <p>Contact us via email, and we'll respond promptly with a detailed, tailored report to meet your specific needs.</p>
+    
+        <style>
+            /* General Styling */
+            #contact {
+                background-color: #f5f5f5; /* Light background to match the modern theme */
+                padding: 40px 20px;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern touch */
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            #contact h2 {
+                font-size: 28px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            #contact p {
+                color: #666;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 30px;
+            }
+    
+            /* Form Styling */
+            form {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 30px;
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            }
+    
+            label {
+                display: block;
+                text-align: left;
+                margin-bottom: 8px;
+                font-weight: 600;
+                color: #333;
+            }
+    
+            input[type="email"], input[type="file"], textarea {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-family: 'Arial', sans-serif;
+                background-color: #fafafa;
+                box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s ease;
+            }
+    
+            input[type="email"]:focus, textarea:focus {
+                border-color: #0073e6; /* Blue border on focus */
+                outline: none;
+            }
+    
+            button[type="submit"] {
+                width: 100%;
+                padding: 12px;
+                background-color: #0073e6;
+                color: #fff;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 18px;
+                transition: background-color 0.3s ease;
+            }
+    
+            button[type="submit"]:hover {
+                background-color: #005bb5; /* Darker blue on hover */
+            }
+    
+            /* Contact Info Styling */
+            #contact p a {
+                color: #0073e6;
+                text-decoration: none;
+                font-weight: bold;
+            }
+    
+            #contact p a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    
+        <form action="https://formspree.io/f/xdknbbgn" method="POST" enctype="multipart/form-data">
+            <label>Your email:
+                <input type="email" name="email" required>
+            </label>
+            
+            <label>Your message:
+                <textarea name="message" rows="4" required></textarea>
+            </label>
+          
+            <label>Your file:
+                <input type="file" name="upload">
+            </label>
+            
+            <button type="submit">Send</button>
+        </form>
+        
+        <p>Email: <a href="mailto:webCrafterDevs@gmail.com">WebCrafterDevs@gmail.com</a></p>
         <p>Phone: N/A</p>
     </section>
+    
     <footer class="footer">
         <p>&copy; 2024 Webcrafters. All rights reserved.</p>
     </footer>
+    
 </body>
 </html>
