@@ -1,18 +1,53 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
 }
 
 .header {
-    background-color: #333;
+    background-color: #d3d3d3;
     color: #fff;
     padding: 10px 0;
     text-align: center;
 }
 
+.header img {
+    max-width: 50px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    width: 100%; /* Make the nav cover the full width of the header */
+    background-color: lightgray;
+    box-shadow: 3px 3px 10px darkgrey;
+    padding: 8px 0; /* Remove side padding to avoid extra space */
+    border-radius: 5px; /* Subtle rounding */
+    justify-content: space-between; /* Ensures equal spacing on both ends */
+    margin: 0; /* Ensure no extra space around the nav bar */
+}
+
+.nav > li {
+    padding: 10px;
+    box-shadow: 3px 3px 3px darkgrey;
+    cursor: pointer;
+    border-radius: 5px; /* Reduced curvature */
+    color: darkgray;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1; /* Each item takes up equal space */
+}
+
+.nav > li:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: darkgray;
+    color: white;
+}
+
+
+
 .nav ul {
+    display: flex;
     list-style: none;
     padding: 0;
 }
@@ -30,7 +65,7 @@ body {
 .home, .services, .contact {
     padding: 20px;
     margin: 10px;
-    background-color: #fff;
+    background-color: whitesmoke;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,7 +85,25 @@ body {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: -webkit-sticky;
     width: 100%;
     bottom: 0;
 }
+
+
+.footer {
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Dark grey text color for readability */
+    text-align: center; /* Centering the text */
+    padding: 20px 10%; /* Adding padding for space */
+    border-radius: 15px 15px 0 0; /* Rounding the top corners */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    position: relative; /* Ensuring the footer stays at the bottom */
+    font-size: 14px; /* Adjusting the font size for better readability */
+    margin-top: 40px; /* Adding space above the footer */
+}
+
+.footer p {
+    margin: 0; /* Removing default margin for consistent spacing */
+}
+
